@@ -146,7 +146,6 @@ set_location_assignment PIN_N20 -to ps2_mouse_clk_io
 set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_A8 -to ear_maxduino
 set_location_assignment PIN_A13 -to i2c_scl_io
 set_location_assignment PIN_A14 -to i2c_sda_io
 set_location_assignment PIN_A4 -to esp_rx_i

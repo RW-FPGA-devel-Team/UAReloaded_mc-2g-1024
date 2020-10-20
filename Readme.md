@@ -20,10 +20,7 @@ This package is an extension on the FPGA multicomputer, as introduced by Grant S
 As github does not permit big files, you can get the system image from:
 [Here](https://mega.nz/file/b4x3HBbI#ZSz0A_3J3G3JzT0UY21_9xDDHfIxYkqHwc6D15DRFFg).
 
- You have two options:
-
-* Burn the image to a fresh SD card and use it on the secondary SD slot (I/0 board). (dd in Linux, Win32DiskImager in Windows)
-* put it in the games/mc-2g-1024/ directory on your main SD card.
+Burn the image to a fresh SD card and use it on the secondary SD slot. (dd in Linux, Win32DiskImager in Windows)
 
 ## Starting OS.
 
