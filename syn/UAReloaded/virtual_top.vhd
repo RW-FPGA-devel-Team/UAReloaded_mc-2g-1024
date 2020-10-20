@@ -164,8 +164,7 @@ begin
 		txd2				=> serTX,					--: out std_logic;
 		rts2				=> serRTS,					--: out std_logic;
 		cts2				=> 'Z',						--: out std_logic;
---		videoSync		=> open,						--: out std_logic;
---		video				=> open,						--: out std_logic;
+
 		videoR0			=> vgar(0),					--: out std_logic;
 		videoG0			=> vgag(0),					--: out std_logic;
 		videoB0			=> vgab(0),					--: out std_logic;
@@ -174,7 +173,6 @@ begin
 		videoB1			=> vgab(1),					--: out std_logic;
 		hSync				=> hsync_n,					--: out std_logic;
 		vSync				=> vsync_n,					--: out std_logic;
---		blank_o			=> blank_s,
 		ps2Clk			=> ps2_clk_io,				--: inout std_logic;
 		ps2Data			=> ps2_data_io,			--: inout std_logic;
 		sdCS				=> sd_cs_n_o,				--: out std_logic;
@@ -189,29 +187,21 @@ begin
 	reset_n_s	<= pll_locked and (btn_n_i(3) or btn_n_i(4));
 
 	sram_addr_o		<= sramAddr;
-	--sram_ce_n_o(0)	<= sramCS_n;
 	sram_we_n_o		<= sramWE_n;
 	sram_oe_n_o		<= sramOE_n;
 	serRX				<= '0';
 
 
 
-
-
-		VGA_R			<= vga_out_s(7 downto 5) & "00000";
-		VGA_G			<= vga_out_s(4 downto 2) & "00000";
-		VGA_B			<= vga_out_s(1 downto 0) & "000000";
-		VGA_HS	   <= hsync_n;
-		VGA_VS	   <= vsync_n;
-		VGA_CLOCK   <= clock_master;
-		VGA_BLANK   <= '1';
-		
-
-
-
-
 	vga_out_s <= vgar & '0' & vgag & '0' & vgab;
-	
+
+	VGA_R			<= vga_out_s(7 downto 5) & "00000";
+	VGA_G			<= vga_out_s(4 downto 2) & "00000";
+	VGA_B			<= vga_out_s(1 downto 0) & "000000";
+	VGA_HS	   <= hsync_n;
+	VGA_VS	   <= vsync_n;
+	VGA_CLOCK   <= clock_master;
+	VGA_BLANK   <= '1';
 	
 
 end architecture;
